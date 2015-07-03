@@ -4,12 +4,14 @@ module EatabitRails
 
     attr_reader :name,
                 :environment,
-                :enabled
+                :enabled,
+                :created_at
 
     def initialize(attributes)
       @name         = attributes['name']
       @environment  = attributes['environment']
       @enabled      = attributes['enabled']
+      @created_at   = attributes['created_at']
     end
 
     def self.find

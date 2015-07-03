@@ -19,14 +19,6 @@ module EatabitRails
         @version  = EatabitRails.configuration.version || EatabitRails::REST::Config::VERSION
       end
 
-      def printer(id)
-        [
-          base_uri,
-          'printers',
-          id
-        ].join('/')
-      end
-
       def base_uri
         [
           @protocol,
@@ -41,6 +33,22 @@ module EatabitRails
           '/account/',
           @sid
         ].join
+      end
+
+      def printer(id)
+        [
+          base_uri,
+          'printers',
+          id
+        ].join('/')
+      end
+
+      def job(id, printer_id)
+        [
+          printer(printer_id),
+          'jobs',
+          id
+        ].join('/')
       end
 
       alias :account :base_uri

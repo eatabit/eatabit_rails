@@ -23,6 +23,7 @@ RSpec.describe EatabitRails::Account do
         expect(account.name).to eq('eatabit.io Test')
         expect(account.environment).to eq('development')
         expect(account.enabled).to be
+        expect(account.created_at).to be
       end
     end
 
