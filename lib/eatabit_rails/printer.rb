@@ -4,7 +4,13 @@ module EatabitRails
 
     PATH = 'printers'
 
-    attr_reader :printer
+    attr_reader :name,
+                :enabled,
+                :pickup_minutes,
+                :delivery_minutes,
+                :state,
+                :online,
+                :has_paper
 
     def initialize(attributes)
       @name             = attributes['name']
