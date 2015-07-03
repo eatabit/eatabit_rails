@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://617117b5-4042-4951-b75c-88f2ee159afd:c7ae2067-95bd-4722-909a-9307ce019097@api.eatabit.io/v2/account/617117b5-4042-4951-b75c-88f2ee159afd/printers/fc4a764b-4822-45d5-b91f-bc808412002f
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 03 Jul 2015 19:51:04 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"951e081be5e3df41153e3729fd0cb238"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2ad49a63-1be9-4d1c-a730-973d00ec6ff6
+      X-Runtime:
+      - '0.012338'
+      Content-Length:
+      - '150'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"printer":{"name":"Eatabit.io Pizza","enabled":true,"pickup_minutes":15,"delivery_minutes":30,"state":"unavailable","online":false,"has_paper":true}}'
+    http_version: 
+  recorded_at: Fri, 03 Jul 2015 19:51:04 GMT
+recorded_with: VCR 2.9.3
