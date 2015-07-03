@@ -2,8 +2,6 @@ module EatabitRails
 
   class Printer
 
-    PATH = 'printers'
-
     attr_reader :name,
                 :enabled,
                 :pickup_minutes,

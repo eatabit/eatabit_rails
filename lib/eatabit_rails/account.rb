@@ -2,8 +2,6 @@ module EatabitRails
 
   class Account
 
-    PATH = 'account'
-
     attr_reader :name,
                 :environment,
                 :enabled

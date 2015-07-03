@@ -22,7 +22,7 @@ module EatabitRails
       def printer(id)
         [
           base_uri,
-          EatabitRails::Printer::PATH,
+          'printers',
           id
         ].join('/')
       end
