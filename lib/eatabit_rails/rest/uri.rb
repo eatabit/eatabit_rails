@@ -27,8 +27,6 @@ module EatabitRails
         ].join('/')
       end
 
-      private
-
       def base_uri
         [
           @protocol,
@@ -44,6 +42,8 @@ module EatabitRails
           @sid
         ].join
       end
+
+      alias :account :base_uri
     end
   end
 end
