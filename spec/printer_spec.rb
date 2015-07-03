@@ -9,28 +9,31 @@ RSpec.describe EatabitRails::Printer do
     end
   end
 
-  describe '.find' do
+  context 'v2', version: :v2 do
 
-    let(:printer) { find_printer }
+    describe '.find' do
 
-    it 'should return a EatabitRails::Printer' do
-      expect(printer).to be_a(EatabitRails::Printer)
+      let(:printer) { find_printer }
+
+      it 'should return a EatabitRails::Printer' do
+        expect(printer).to be_a(EatabitRails::Printer)
+      end
+
+      it 'should assign attributes' do
+        expect(printer.name).to eq('Eatabit.io Pizza')
+        expect(printer.enabled).to be
+        expect(printer.pickup_minutes).to eq(15)
+        expect(printer.delivery_minutes).to eq(30)
+        expect(printer.state).to eq('unavailable')
+        expect(printer.online).to_not be
+        expect(printer.has_paper).to be
+      end
     end
 
-    it 'should assign attributes' do
-      expect(printer.name).to eq('Eatabit.io Pizza')
-      expect(printer.enabled).to be
-      expect(printer.pickup_minutes).to eq(15)
-      expect(printer.delivery_minutes).to eq(30)
-      expect(printer.state).to eq('unavailable')
-      expect(printer.online).to_not be
-      expect(printer.has_paper).to be
-    end
-  end
-
-  def find_printer
-    VCR.use_cassette('printer') do
-      EatabitRails::Printer.find 'fc4a764b-4822-45d5-b91f-bc808412002f'
+    def find_printer
+      VCR.use_cassette('printer') do
+        EatabitRails::Printer.find 'fc4a764b-4822-45d5-b91f-bc808412002f'
+      end
     end
   end
 end

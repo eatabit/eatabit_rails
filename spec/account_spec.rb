@@ -9,24 +9,27 @@ RSpec.describe EatabitRails::Account do
     end
   end
 
-  describe '.find' do
+  context 'v2', version: :v2 do
 
-    let(:account) { find_account }
+    describe '.find' do
 
-    it 'should return a EatabitRails::Account' do
-      expect(account).to be_a(EatabitRails::Account)
+      let(:account) { find_account }
+
+      it 'should return a EatabitRails::Account' do
+        expect(account).to be_a(EatabitRails::Account)
+      end
+
+      it 'should assign attributes' do
+        expect(account.name).to eq('eatabit.io Test')
+        expect(account.environment).to eq('development')
+        expect(account.enabled).to be
+      end
     end
 
-    it 'should assign attributes' do
-      expect(account.name).to eq('eatabit.io Test')
-      expect(account.environment).to eq('development')
-      expect(account.enabled).to be
-    end
-  end
-
-  def find_account
-    VCR.use_cassette('account') do
-      EatabitRails::Account.find
+    def find_account
+      VCR.use_cassette('account') do
+        EatabitRails::Account.find
+      end
     end
   end
 end
