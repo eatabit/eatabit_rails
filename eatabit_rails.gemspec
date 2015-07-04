@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["greg.oleksiak@gmail.com"]
 
   spec.summary       = %q{The official gem for the eatabit.io API}
+  spec.description   = %q{Taking orders online is easy. (ok, not that easy) but getting the order into the hands of the restaurant...that's hard.}
   spec.homepage      = "http://www.eatabit.io"
   spec.license       = "MIT"
 
@@ -26,12 +27,12 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.10"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "vcr"
-  spec.add_development_dependency "webmock"
+  spec.add_development_dependency 'bundler', '~> 1.10'
+  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rspec', '~> 3.3', '>= 3.3.0'
+  spec.add_development_dependency 'vcr', '~> 2.9', '>= 2.9.3'
+  spec.add_development_dependency 'webmock', '~> 1.21', '>= 1.21.0'
 
-  spec.add_dependency "rest-client"
-  spec.add_dependency "json"
+  spec.add_dependency 'rest-client', '~> 1.8', '>= 1.8.0'
+  spec.add_dependency 'json', '~> 1.8', '>= 1.8.3'
 end
