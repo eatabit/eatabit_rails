@@ -18,6 +18,18 @@ RSpec.describe EatabitRails::Job do
       it 'should return a EatabitRails::Job' do
         expect(job).to be_a(EatabitRails::Job)
       end
+
+      it 'should assign attributes' do
+        expect(job.id).to eq(25311)
+        expect(job.body).to eq('One large pepperoni pizza')
+        expect(job.state).to eq('queued')
+        expect(job.environment).to eq('development')
+        expect(job.pickup_minutes).to eq(15)
+        expect(job.delivery_minutes).to eq(30)
+        expect(job.status_url).to eq('https://api.mysite.com/orders/1024768.json')
+        expect(job.status_url_method).to eq('PUT')
+        expect(job.created_at).to be
+      end
     end
 
     describe '.find' do

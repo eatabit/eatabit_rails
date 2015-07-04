@@ -24,10 +24,10 @@ module EatabitRails
       @created_at         = attributes['created_at']
     end
 
-    def self.create(printer_id, attributes)
+    def self.create(printer_id, job_attributes)
       job_uri             = EatabitRails::REST::Uri.new.job printer_id
       params              = EatabitRails::REST::Uri.default_params
-      response            = RestClient.post job_uri, attributes
+      response            = RestClient.post job_uri, job_attributes
       response_attributes = JSON.parse(response.body)['job']
 
       new response_attributes
