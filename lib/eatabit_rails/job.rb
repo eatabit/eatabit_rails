@@ -24,13 +24,22 @@ module EatabitRails
       @created_at         = attributes['created_at']
     end
 
-    def self.find(id, printer_id)
-      job_uri     = EatabitRails::REST::Uri.new.job id, printer_id
-      params      = EatabitRails::REST::Uri.default_params
-      response    = RestClient.get job_uri, params
-      attributes  = JSON.parse(response.body)['job']
+    def self.create(printer_id, attributes)
+      job_uri             = EatabitRails::REST::Uri.new.job printer_id
+      params              = EatabitRails::REST::Uri.default_params
+      response            = RestClient.post job_uri, attributes
+      response_attributes = JSON.parse(response.body)['job']
 
-      new(attributes)
+      new response_attributes
+    end
+
+    def self.find(printer_id, job_id)
+      job_uri             = EatabitRails::REST::Uri.new.job printer_id, job_id
+      params              = EatabitRails::REST::Uri.default_params
+      response            = RestClient.get job_uri, params
+      response_attributes = JSON.parse(response.body)['job']
+
+      new response_attributes
     end
   end
 end

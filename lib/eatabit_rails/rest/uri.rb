@@ -43,12 +43,17 @@ module EatabitRails
         ].join('/')
       end
 
-      def job(id, printer_id)
-        [
+      def job(printer_id, job_id = nil)
+        uri = [
           printer(printer_id),
-          'jobs',
-          id
-        ].join('/')
+          'jobs'
+        ]
+
+        if job_id
+          uri.push job_id
+        end
+
+        uri.join('/')
       end
 
       alias :account :base_uri

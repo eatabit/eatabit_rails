@@ -11,6 +11,15 @@ RSpec.describe EatabitRails::Job do
 
   context 'v2', version: :v2 do
 
+    describe '.create' do
+
+      let(:job) { create_job }
+
+      it 'should return a EatabitRails::Job' do
+        expect(job).to be_a(EatabitRails::Job)
+      end
+    end
+
     describe '.find' do
 
       let(:job) { find_job }
@@ -32,9 +41,23 @@ RSpec.describe EatabitRails::Job do
       end
     end
 
+    def job_attributes
+      {
+        body: 'One large pepperoni pizza',
+        status_url: 'https://api.mysite.com/orders/1024768.json',
+        status_url_method: 'PUT'
+      }
+    end
+
+    def create_job
+      VCR.use_cassette('job_create') do
+        EatabitRails::Job.create 'fc4a764b-4822-45d5-b91f-bc808412002f', job_attributes
+      end
+    end
+
     def find_job
       VCR.use_cassette('job') do
-        EatabitRails::Job.find '9696', 'fc4a764b-4822-45d5-b91f-bc808412002f'
+        EatabitRails::Job.find 'fc4a764b-4822-45d5-b91f-bc808412002f', '9696'
       end
     end
   end
