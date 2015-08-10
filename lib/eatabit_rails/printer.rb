@@ -9,7 +9,11 @@ module EatabitRails
                 :delivery_minutes,
                 :state,
                 :online,
-                :has_paper
+                :paper,
+                :fulfillment,
+                :sound,
+                :light,
+                :autoprint
 
     def initialize(attributes)
       @id               = attributes['id']
@@ -19,7 +23,11 @@ module EatabitRails
       @delivery_minutes = attributes['delivery_minutes']
       @state            = attributes['state']
       @online           = attributes['online']
-      @has_paper        = attributes['has_paper']
+      @paper            = attributes['paper']
+      @fulfillment      = attributes['fulfillment']
+      @sound            = attributes['sound']
+      @light            = attributes['light']
+      @autoprint        = attributes['autoprint']
     end
 
     def self.find(id)
