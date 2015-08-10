@@ -20,6 +20,7 @@ RSpec.describe EatabitRails::Printer do
       end
 
       it 'should assign attributes' do
+        expect(printer.id).to eq('fc4a764b-4822-45d5-b91f-bc808412002f')
         expect(printer.name).to eq('Eatabit.io Pizza')
         expect(printer.enabled).to be
         expect(printer.pickup_minutes).to eq(15)

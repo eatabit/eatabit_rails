@@ -2,7 +2,8 @@ module EatabitRails
 
   class Printer
 
-    attr_reader :name,
+    attr_reader :id,
+                :name,
                 :enabled,
                 :pickup_minutes,
                 :delivery_minutes,
@@ -11,6 +12,7 @@ module EatabitRails
                 :has_paper
 
     def initialize(attributes)
+      @id               = attributes['id']
       @name             = attributes['name']
       @enabled          = attributes['enabled']
       @pickup_minutes   = attributes['pickup_minutes']

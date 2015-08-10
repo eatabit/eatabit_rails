@@ -23,26 +23,29 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 03 Jul 2015 20:43:07 GMT
+      - Mon, 10 Aug 2015 20:09:10 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json
       Etag:
-      - W/"951e081be5e3df41153e3729fd0cb238"
+      - W/"45fb41485ad48375dc7429acec27836d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 88546e17-abf3-42d2-bbbc-218d19a90d5f
+      - 4cfd8940-37d8-4920-8a7e-2a972a4c9e5d
       X-Runtime:
-      - '0.011667'
+      - '0.526336'
+      Vary:
+      - Origin
       Content-Length:
-      - '150'
+      - '194'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"printer":{"name":"Eatabit.io Pizza","enabled":true,"pickup_minutes":15,"delivery_minutes":30,"state":"unavailable","online":false,"has_paper":true}}'
+      string: '{"printer":{"id":"fc4a764b-4822-45d5-b91f-bc808412002f","name":"Eatabit.io
+        Pizza","enabled":true,"pickup_minutes":15,"delivery_minutes":30,"state":"unavailable","online":false,"has_paper":true}}'
     http_version: 
-  recorded_at: Fri, 03 Jul 2015 20:43:08 GMT
+  recorded_at: Mon, 10 Aug 2015 20:09:11 GMT
 recorded_with: VCR 2.9.3
