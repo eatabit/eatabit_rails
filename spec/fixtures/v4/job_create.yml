@@ -46,7 +46,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"job":{"id":30751,"state":"queued","body":"One large pepperoni pizza","environment":"development","fulfill_at":"2015-08-11T22:33:41Z","status_url":"https://api.mysite.com/orders/1024768.json","status_url_method":"PUT","expire_seconds":300,"expires_at":"2015-08-11T22:38:41Z","external_id":"1024-768#ALPHA","account":{"sid":"617117b5-4042-4951-b75c-88f2ee159afd"},"printer":{"id":"fc4a764b-4822-45d5-b91f-bc808412002f","fulfillment":5},"created_at":"2015-08-11T22:33:41Z"}}'
+      string: '{"job":{"id":30751,"state":"queued","body":"One large pepperoni pizza","environment":"development","fulfill_at":"2015-08-11T22:33:41Z","status_url":"https://api.mysite.com/orders/1024768.json","status_url_method":"PUT","expire_seconds":400,"expires_at":"2015-08-11T22:38:41Z","external_id":"1024-768#ALPHA","account":{"sid":"617117b5-4042-4951-b75c-88f2ee159afd"},"printer":{"id":"fc4a764b-4822-45d5-b91f-bc808412002f","fulfillment":5},"created_at":"2015-08-11T22:33:41Z"}}'
     http_version:
   recorded_at: Tue, 11 Aug 2015 22:33:45 GMT
 recorded_with: VCR 2.9.3

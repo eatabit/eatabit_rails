@@ -31,6 +31,8 @@ RSpec.describe EatabitRails::Job do
         expect(job.created_at).to be
         expect(job.account).to eq({ 'sid' => '617117b5-4042-4951-b75c-88f2ee159afd' })
         expect(job.printer).to eq({ 'fulfillment' => 5, 'id' => 'fc4a764b-4822-45d5-b91f-bc808412002f' })
+        expect(job.expire_seconds).to eq(400)
+        expect(job.expires_at).to be
       end
     end
 
@@ -54,6 +56,8 @@ RSpec.describe EatabitRails::Job do
         expect(job.created_at).to be
         expect(job.account).to eq({ 'sid' => '617117b5-4042-4951-b75c-88f2ee159afd' })
         expect(job.printer).to eq({ 'fulfillment' => 5, 'id' => 'fc4a764b-4822-45d5-b91f-bc808412002f' })
+        expect(job.expire_seconds).to eq(400)
+        expect(job.expires_at).to be
       end
     end
 
@@ -62,7 +66,8 @@ RSpec.describe EatabitRails::Job do
         id: '1024-768#ALPHA',
         body: 'One large pepperoni pizza',
         status_url: 'https://api.mysite.com/orders/1024768.json',
-        status_url_method: 'PUT'
+        status_url_method: 'PUT',
+        expire_seconds: 400
       }
     end
 

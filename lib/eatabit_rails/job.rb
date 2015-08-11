@@ -14,6 +14,8 @@ module EatabitRails
                 :created_at,
                 :fulfill_at,
                 :api_version,
+                :expire_seconds,
+                :expires_at,
                 :account,
                 :printer
 
@@ -30,6 +32,8 @@ module EatabitRails
       @created_at         = attributes['created_at']
       @fulfill_at         = attributes['fulfill_at']
       @api_version        = attributes['api_version']
+      @expire_seconds     = attributes['expire_seconds']
+      @expires_at         = attributes['expires_at']
       @account            = attributes['account']
       @printer            = attributes['printer']
     end
