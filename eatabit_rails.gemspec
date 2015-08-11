@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{The official gem for the eatabit.io API}
   spec.description   = %q{Taking orders online is easy. (ok, not that easy) but getting the order into the hands of the restaurant...that's hard.}
-  spec.homepage      = "http://www.eatabit.io"
+  spec.homepage      = "https://github.com/eatabit/eatabit_rails"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
