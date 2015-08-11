@@ -3,6 +3,7 @@ module EatabitRails
   class Job
 
     attr_reader :id,
+                :external_id,
                 :body,
                 :state,
                 :environment,
@@ -10,10 +11,15 @@ module EatabitRails
                 :delivery_minutes,
                 :status_url,
                 :status_url_method,
-                :created_at
+                :created_at,
+                :fulfill_at,
+                :api_version,
+                :account,
+                :printer
 
     def initialize(attributes)
       @id                 = attributes['id']
+      @external_id        = attributes['external_id']
       @body               = attributes['body']
       @state              = attributes['state']
       @environment        = attributes['environment']
@@ -22,6 +28,10 @@ module EatabitRails
       @status_url         = attributes['status_url']
       @status_url_method  = attributes['status_url_method']
       @created_at         = attributes['created_at']
+      @fulfill_at         = attributes['fulfill_at']
+      @api_version        = attributes['api_version']
+      @account            = attributes['account']
+      @printer            = attributes['printer']
     end
 
     def self.create(printer_id, job_attributes)
