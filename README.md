@@ -49,7 +49,7 @@ EatabitRails::Job.find(printer_id, job_id)
 ## Show a Printer
 
 ```
-EatabitRails::Account(printer_id)
+EatabitRails::Printer(printer_id)
 ```
 
 ## Show an Account
