@@ -3,7 +3,7 @@
 The official gem for the [eatabit.io](http://eatabit.io) API.
 
 ## Documentation
-API documentation can be found [here](http://eatabit.io/documentation/v2/).
+API documentation can be found [here](http://documentation.eatabit.io/v4).
 
 ## Installation
 
@@ -29,43 +29,36 @@ Create an initializer like: config/initializers/eatabit.rb
 EatabitRails.configure do |config|
   config.sid      = ENV.fetch('EATABIT_SID')
   config.token    = ENV.fetch('EATABIT_TOKEN')
-  config.version  = 'v2'
+  config.version  = 'v4'
 end
 
 ```
 
 ## Create a Job
-The full API Job spec can be found [here](http://eatabit.io/documentation/v2/job-create.html)
 
 ```
 EatabitRails::Job.create(printer_id, job_data)
 ```
 
 ## Show a Job
-The full API Job spec can be found [here](http://eatabit.io/documentation/v2/job-read.html)
 
 ```
 EatabitRails::Job.find(printer_id, job_id)
 ```
 
 ## Show a Printer
-The full API Printer spec can be found [here](http://eatabit.io/documentation/v2/printer-read.html)
 
 ```
 EatabitRails::Account(printer_id)
 ```
 
 ## Show an Account
-The full API Account spec can be found [here](http://eatabit.io/documentation/v2/account-read.html)
 
 ```
 EatabitRails::Account.find
 ```
 
 ## More Information
-
-The full API spec can be found [here](http://eatabit.io/documentation/v2).
-
 
 ## Development
 
