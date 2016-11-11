@@ -8,7 +8,7 @@ RSpec.describe EatabitRails::Printer do
     end
   end
 
-  context 'v4', version: :v4 do
+  context 'v5', version: :v5 do
     describe '.find' do
       let(:printer) { find_printer }
 
@@ -32,7 +32,7 @@ RSpec.describe EatabitRails::Printer do
   end
 
   def find_printer
-    VCR.use_cassette('v4/printer') do
+    VCR.use_cassette('v5/printer') do
       EatabitRails::Printer.find 'fc4a764b-4822-45d5-b91f-bc808412002f'
     end
   end

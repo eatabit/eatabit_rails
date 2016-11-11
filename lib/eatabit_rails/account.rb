@@ -1,5 +1,4 @@
 module EatabitRails
-
   class Account
 
     attr_reader :name,

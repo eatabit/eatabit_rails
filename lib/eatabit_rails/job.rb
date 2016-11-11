@@ -1,5 +1,4 @@
 module EatabitRails
-
   class Job
 
     attr_reader :id,

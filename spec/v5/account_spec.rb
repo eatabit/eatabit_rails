@@ -8,7 +8,7 @@ RSpec.describe EatabitRails::Account do
     end
   end
 
-  context 'v4', version: :v4 do
+  context 'v5', version: :v5 do
     describe '.find' do
       let(:account) { find_account }
 
@@ -26,7 +26,7 @@ RSpec.describe EatabitRails::Account do
   end
 
   def find_account
-    VCR.use_cassette('v4/account') do
+    VCR.use_cassette('v5/account') do
       EatabitRails::Account.find
     end
   end

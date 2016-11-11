@@ -1,5 +1,4 @@
 module EatabitRails
-
   class Printer
 
     attr_reader :id,
