@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.eatabit.io/v5/account/617117b5-4042-4951-b75c-88f2ee159afd/printers/beb3a92a-17a6-4bf6-a3f0-41712ccf49b5
+    body:
+      encoding: UTF-8
+      string: content_type=json&accept=json&autoprint=true&sound=0&light=1
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin16.7.0 x86_64) ruby/2.5.1p57
+      Content-Length:
+      - '60'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - api.eatabit.io
+      Authorization:
+      - Basic NjE3MTE3YjUtNDA0Mi00OTUxLWI3NWMtODhmMmVlMTU5YWZkOmM3YWUyMDY3LTk1YmQtNDcyMi05MDlhLTkzMDdjZTAxOTA5Nw==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 08 Jun 2018 13:12:42 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"b5ca10c2d4aa7808d158bfef44137898"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1087d2e3-af79-40d0-9ee9-9d605e4a9065
+      X-Runtime:
+      - '0.064803'
+      Vary:
+      - Origin
+      Content-Length:
+      - '212'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"printer":{"id":"beb3a92a-17a6-4bf6-a3f0-41712ccf49b5","fulfillment":15,"hardware_version":5,"enabled":true,"name":"8cf941a4af8fa20c87db","autoprint":true,"sound":0,"light":1,"paper":true,"lease_start_at":null}}'
+    http_version: 
+  recorded_at: Fri, 08 Jun 2018 13:12:42 GMT
+recorded_with: VCR 4.0.0

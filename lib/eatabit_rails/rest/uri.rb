@@ -1,9 +1,8 @@
+# frozen_string_literal: true
+
 module EatabitRails
-
   module REST
-
     class Uri
-
       def self.default_params
         {
           content_type: :json,
@@ -12,11 +11,11 @@ module EatabitRails
       end
 
       def initialize
-        @sid      = EatabitRails.configuration.sid
-        @token    = EatabitRails.configuration.token
+        @sid = EatabitRails.configuration.sid
+        @token = EatabitRails.configuration.token
         @protocol = EatabitRails::REST::Config::PROTOCOL
-        @host     = EatabitRails::REST::Config::HOST
-        @version  = EatabitRails.configuration.version || EatabitRails::REST::Config::VERSION
+        @host = EatabitRails::REST::Config::HOST
+        @version = EatabitRails.configuration.version || EatabitRails::REST::Config::VERSION
       end
 
       def base_uri
@@ -49,14 +48,11 @@ module EatabitRails
           'jobs'
         ]
 
-        if job_id
-          uri.push job_id
-        end
-
+        uri.push(job_id) if job_id
         uri.join('/')
       end
 
-      alias :account :base_uri
+      alias account base_uri
     end
   end
 end

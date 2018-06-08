@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 RSpec.describe EatabitRails::Printer do
-
   describe 'existance' do
     it 'should exist' do
       expect(EatabitRails::Printer).to be

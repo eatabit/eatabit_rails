@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rest-client'
 
 require 'eatabit_rails/version'
@@ -9,7 +11,6 @@ require 'eatabit_rails/printer'
 require 'eatabit_rails/job'
 
 module EatabitRails
-
   def self.configure(&block)
     yield configuration
   end
